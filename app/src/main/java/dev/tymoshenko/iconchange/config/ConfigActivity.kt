@@ -10,10 +10,11 @@ class ConfigActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        this.enableMainActivity()
+        enableMainActivity()
         startActivity(
             Intent(this, MainActivity::class.java).apply {
                 putExtra("is_config", true)
+                flags = Intent.FLAG_ACTIVITY_NO_ANIMATION
             }
         )
     }
