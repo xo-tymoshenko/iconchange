@@ -14,7 +14,7 @@ class ConfigActivity : ComponentActivity() {
         startActivity(
             Intent(this, MainActivity::class.java).apply {
                 putExtra("is_config", true)
-                flags = Intent.FLAG_ACTIVITY_NO_ANIMATION
+                flags = Intent.FLAG_ACTIVITY_NO_ANIMATION or Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT
             }
         )
     }
